@@ -1,0 +1,23 @@
+{
+  "name": "weather-mcp-server",
+  "version": "1.0.0",
+  "description": "MCP weather server — Open-Meteo API, no key needed",
+  "type": "module",
+  "bin": {
+    "weather-mcp": "./build/index.js"
+  },
+  "scripts": {
+    "build": "tsc && chmod 755 build/index.js",
+    "dev": "tsc --watch",
+    "start": "node build/index.js",
+    "inspector": "npx @modelcontextprotocol/inspector node build/index.js"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.0.0",
+    "zod": "^3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "typescript": "^5.6.0"
+  }
+}
